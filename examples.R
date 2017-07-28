@@ -60,3 +60,25 @@ predict(res_millett, transf = exp)
 het_millett <- hetmeta(res_millett)
 het_millett
 confint(het_millett, rma.type = F, level = 95)
+
+
+## -----------------------------------------------------------------------------
+## Table I
+## Example of a hypothetical meta-analysis of 10 studies.
+
+## function for typical s2 as defined in I2
+s2typ <- function(si2){
+  k <- length(si2)
+  wi <- 1/si2
+  (k-1)*sum(wi)/(sum(wi)^2 - sum(wi^2))   
+}
+
+A <- c(6, 6.1, 6.2, 5.9, 6.0, 5.9, 6.1, 5.8, 6.0, 6.2)
+B <- c(5, 19, 3, 15, 6, 23, 4, 17, 2, 8.8)
+
+round(data.frame(
+  CV_vi = c(sd(A)/mean(A), sd(B)/mean(B)),
+  s2_1 = c(s2typ(A), s2typ(B)),
+  s2_2 = c(length(A)/(sum(1/A)), length(B)/(sum(1/B))),
+  v_mean = c(mean(A), mean(B))
+), 3)
