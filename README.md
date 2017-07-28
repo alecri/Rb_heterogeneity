@@ -18,7 +18,10 @@ Note: version 0.2.0 of the R package `hetmeta` is required. It can be downloaded
 
 This repository contains:  
 - *data*, a folder with the data;  
-- `examples.R`, an R script to reproduce the results in the section *Illustrative examples*.
+- `examples.R`, an R script to reproduce the results in the section *Illustrative examples*.  
+- `simulation_design.R`, an R script to reproduce the simulation design described in *Simulation study*.  
+- `simulation_results.R`, an R script to reproduce the results (tables) of the simulation desing.  
+
 
 ---
 
