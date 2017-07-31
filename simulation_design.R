@@ -90,7 +90,7 @@ N <- 10000
 set.seed(1234)
 
 start.time <- Sys.time()
-#Time difference of 33.09193 mins
+#Time difference of 33 mins
 for (i in seq_along(tau2)){
   
   combi <- comb[comb$tau2 == tau2[i], ]
